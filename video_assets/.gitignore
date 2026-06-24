@@ -1,0 +1,7 @@
+# Regenerable intermediates (rebuild via build_video.py)
+clips/
+narration.wav
+bed.wav
+video_silent.mp4
+concat_list.txt
+*.curl
