@@ -56,7 +56,8 @@ def wrap(draw, text, font, maxw):
 
 manifest = []
 for n, (t0, text) in enumerate(sentences, 1):
-    disp = text.upper()
+    # Strip trailing periods/commas for the on-screen text (keep ? and !)
+    disp = re.sub(r"[.,]+$", "", text.strip()).upper()
     img = Image.new("RGB", (W, H), "black")
     d = ImageDraw.Draw(img)
     size = 96
